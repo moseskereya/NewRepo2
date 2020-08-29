@@ -1,0 +1,32 @@
+﻿@model App.Models.Movie
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+<h4>@Model.Title</h4>
+
+
+<div class="row">
+    <hr />
+        <div class="col-sm-4">
+            <div class="thumbnail1">
+                <img src="@Model.Img" alt="image" class="img-thumbnail" />
+            </div>
+            <p class="m-2">@Model.Price.ToString("c")</p>
+        </div>
+
+        <div class="col-sm-6">
+            <p class="m-3 align-text-bottom">@Model.Description</p>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-6 text-center">
+                <p class="text-right">
+                    <a asp-controller="Movies" asp-action="Index">Go Back</a>
+                </p>
+            </div>
+            <div class="col-sm-6 text-center">
+                <button class="btn btn-dark m-2">Add</button>
+            </div>
+        </div>
+
+    </div>
